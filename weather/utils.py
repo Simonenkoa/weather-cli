@@ -1,4 +1,4 @@
-import requests 
+ï»¿import requests 
  
 def city_to_coords(city: str): 
     url = "https://nominatim.openstreetmap.org/search" 
@@ -11,4 +11,4 @@ def city_to_coords(city: str):
         if not data: raise ValueError 
         return float(data[0]["lat"]), float(data[0]["lon"]) 
     except: 
-        raise RuntimeError(f"ƒ®à®¤ '{city}' ­¥ ­ ©¤¥­") 
+        raise RuntimeError(f"Ñ“Â®Ğ°Â®Â¤ '{city}' Â­Ò Â­Â Â©Â¤ÒÂ­") 

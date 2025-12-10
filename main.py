@@ -1,19 +1,19 @@
-import argparse 
+ï»¿import argparse 
 from weather.utils import city_to_coords 
 from weather.api import get_weather 
 from weather.parser import print_weather 
  
-parser = argparse.ArgumentParser(description="®£®¤  ¢ â¥à¬¨­ «¥") 
+parser = argparse.ArgumentParser(description="ĞÂ®ĞˆÂ®Â¤Â  Ñ Ğ²ÒĞ°Â¬ĞÂ­Â Â«Ò") 
 group = parser.add_mutually_exclusive_group(required=True) 
-group.add_argument("--city", help=" §¢ ­¨¥ £®à®¤ ") 
-group.add_argument("--lat", type=float, help="˜¨à®â ") 
-group.add_argument("--lon", type=float, help="„®«£®â ") 
+group.add_argument("--city", help="ĞŒÂ Â§ÑÂ Â­ĞÒ ĞˆÂ®Ğ°Â®Â¤Â ") 
+group.add_argument("--lat", type=float, help="Â˜ĞĞ°Â®Ğ²Â ") 
+group.add_argument("--lon", type=float, help="â€Â®Â«ĞˆÂ®Ğ²Â ") 
 parser.add_argument("--unit", choices=["celsius","fahrenheit"], default="celsius") 
 args = parser.parse_args() 
  
 try: 
     if args.city: 
-        print(f"ˆé¥¬ {args.city}...") 
+        print(f"â‚¬Ğ¹ÒÂ¬ {args.city}...") 
         lat, lon = city_to_coords(args.city) 
         place = args.city.capitalize() 
     else: 
@@ -22,4 +22,4 @@ try:
     weather = get_weather(lat, lon, args.unit) 
     print_weather(weather, place) 
 except Exception as e: 
-    print(f"è¨¡ª : {e}") 
+    print(f"Ğ‹Ğ¸ĞĞĞ„Â : {e}") 

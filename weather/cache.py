@@ -1,4 +1,4 @@
-import json 
+ï»¿import json 
 import os 
 from datetime import datetime, timedelta 
  
@@ -21,4 +21,4 @@ def set_cache(key: str, data: dict):
     try: 
         with open(f"{CACHE_DIR}\{key}.json", "w", encoding="utf-8") as f: 
             json.dump({"time": datetime.now().isoformat(), "data": data}, f, ensure_ascii=False, indent=2) 
-    except Exception as e: print("Šíè ®è¨¡ª :", e) 
+    except Exception as e: print("Ğ‰Ğ½Ğ¸ Â®Ğ¸ĞĞĞ„Â :", e) 

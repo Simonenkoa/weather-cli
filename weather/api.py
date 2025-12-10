@@ -1,4 +1,4 @@
-import requests 
+ï»¿import requests 
 from .cache import get_cache, set_cache 
  
 def get_weather(lat: float, lon: float, unit="celsius"): 
@@ -21,7 +21,7 @@ def get_weather(lat: float, lon: float, unit="celsius"):
             "temp": data["temperature"], 
             "wind": data["windspeed"], 
             "code": data["weathercode"], 
-            "unit": "øF" if unit=="fahrenheit" else "øC" } 
+            "unit": "ÑˆF" if unit=="fahrenheit" else "ÑˆC" } 
         set_cache(key, result) 
         return result 
     except Exception as e: 
