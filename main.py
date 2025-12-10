@@ -23,3 +23,4 @@ try:
     print_weather(weather, place) 
 except Exception as e: 
     print(f"ЋиЁЎЄ : {e}") 
+

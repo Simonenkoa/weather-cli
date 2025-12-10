@@ -7,7 +7,7 @@ CACHE_TIME = timedelta(minutes=10)
 os.makedirs(CACHE_DIR, exist_ok=True) 
  
 def get_cache(key: str): 
-    file = f"{CACHE_DIR\{key}.json" 
+    file = f"{CACHE_DIR}/{key}.json" 
     if not os.path.exists(file): return None 
     try: 
         with open(file, encoding="utf-8") as f: 
@@ -22,3 +22,4 @@ def set_cache(key: str, data: dict):
         with open(f"{CACHE_DIR}\{key}.json", "w", encoding="utf-8") as f: 
             json.dump({"time": datetime.now().isoformat(), "data": data}, f, ensure_ascii=False, indent=2) 
     except Exception as e: print("Љни ®иЁЎЄ :", e) 
+

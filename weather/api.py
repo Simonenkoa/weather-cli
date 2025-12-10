@@ -26,3 +26,4 @@ def get_weather(lat: float, lon: float, unit="celsius"):
         return result 
     except Exception as e: 
         raise RuntimeError(f"API error: {e}") 
+
